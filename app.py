@@ -10,7 +10,7 @@ app=Flask(__name__)
 def home():
     return "hello world"
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict',methods=['GET', 'POST'])
 def predict():
 
     Pregnancies=request.form.get('Pregnancies')
